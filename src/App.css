@@ -9,3 +9,8 @@ a {
     color: black;
     padding: 20px;
   }
+
+button {
+    text-decoration: none;
+    background-color: inherit;
+}

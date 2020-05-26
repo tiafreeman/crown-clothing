@@ -1,6 +1,7 @@
 import React from 'react';
 
 import FormInput from '../form-input/form-input';
+import CustomButton from '../custom-button/custom-button';
 
 import './sign-in.scss';
 
@@ -30,7 +31,7 @@ class SignIn extends React.Component {
     const { email, password } = this.state;
     return (
       <div className="sign-in">
-        <h2>I already have an accound</h2>
+        <h2>I already have an account</h2>
         <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubimt}>
@@ -50,7 +51,7 @@ class SignIn extends React.Component {
             handleChange={this.handleChange}
             required
           />
-          <input name="submit" type="submit" value="Submit Form" />
+          <CustomButton value="Submit Form" />
         </form>
       </div>
     );

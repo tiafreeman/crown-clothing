@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/prop-types */
-import React from "react";
+import React from 'react';
 
-import CollectionItem from "../collection-item/collection-item";
+import CollectionItem from '../collection-item/collection-item';
 
-import "./collection-preview.scss";
+import './collection-preview.scss';
 
 const CollectionPreview = ({ title, items }) => (
   <div className="collection-preview">

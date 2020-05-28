@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { Component } from "react";
-import shopData from "./shopData";
+import React, { Component } from 'react';
+import shopData from './shopData';
 
-import CollectionPreview from "../../components/collection-preview/collection-preview";
+import CollectionPreview from '../../components/collection-preview/collection-preview';
 
 class ShopPage extends Component {
   constructor(props) {

@@ -7,7 +7,7 @@ import './form-input.scss';
 const FormInput = ({ handleChange, label, ...otherProps }) => {
   FormInput.propTypes = {
     handleChange: PropTypes.func.isRequired,
-    label: PropTypes.element,
+    label: PropTypes.string,
   };
 
   FormInput.defaultProps = {

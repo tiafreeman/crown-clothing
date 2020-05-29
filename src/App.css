@@ -14,3 +14,7 @@ button {
     text-decoration: none;
     background-color: inherit;
 }
+
+* {
+    box-sizing: border-box;
+}

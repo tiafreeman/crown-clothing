@@ -1,9 +1,13 @@
+/* eslint-disable no-shadow */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-curly-newline */
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from './redux/user/user-selectors';
+import { setCurrentUser } from './redux/user/user-actions';
 import {
   auth,
   createUserProfileDocument,
@@ -14,8 +18,9 @@ import './App.css';
 import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shop/shop';
 import SignInAndRegisterPage from './pages/sign-in-and-register/sign-in-and-register';
+import CheckoutPage from './pages/checkout/checkout';
+
 import Header from './components/header/header';
-import { setCurrentUser } from './redux/user/user-actions';
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -51,6 +56,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
+          <Route exact path="/checkout" component={CheckoutPage} />
           <Route
             exact
             path="/sign-in"
@@ -68,8 +74,8 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({

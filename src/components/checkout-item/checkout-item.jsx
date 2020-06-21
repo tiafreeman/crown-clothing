@@ -10,7 +10,7 @@ import {
   addItem,
   removeCartItem,
   decreaseQuantity,
-} from '../../redux/cart/cart-actions';
+} from '../../redux/cart/cart.actions';
 
 const CheckoutItem = ({
   cartItem,
